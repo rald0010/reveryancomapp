@@ -242,31 +242,31 @@ export class UsersComponent implements OnInit {
     } else {
 
 
-      for (let i = 1; i <= 1000; i++) {
-        console.log(i);
+      // for (let i = 1; i <= 1000; i++) {
+      //   console.log(i);
 
 
-        this.db.collection('users').add({
-          firstName: i,
-          lastName: i,
-          image: '',
-          isActive: true,
-          registered: new Date(),
-          hide: true,
-          email: 'christian.ralddelfino@gmail.com' + i,
-          lodge: 'no' + i,
-          position: 'no' + i,
-          voter: true,
-          address: {
-            street: '',
-            city: '',
-            province: ''
-          },
-        });
+      //   this.db.collection('users').add({
+      //     firstName: i,
+      //     lastName: i,
+      //     image: '',
+      //     isActive: true,
+      //     registered: new Date(),
+      //     hide: true,
+      //     email: 'christian.ralddelfino@gmail.com' + i,
+      //     lodge: 'no' + i,
+      //     position: 'no' + i,
+      //     voter: true,
+      //     address: {
+      //       street: '',
+      //       city: '',
+      //       province: ''
+      //     },
+      //   });
 
 
 
-      }
+      // }
 
 
       this.db.collection('users').add({
