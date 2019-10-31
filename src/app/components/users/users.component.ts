@@ -97,15 +97,15 @@ export class UsersComponent implements OnInit {
       this.users = this.data;
       this.loaded = true;
     }, 5000);
-    this.getUS().subscribe(data => {
-      // this.userService.getUser().subscribe(users => {
-      //     // setTimeout(() => {
-      //     //   this.users = this.data;
-      //     //   this.loaded = true;
-      //     // }, 5000);
-      //   });
-      //console.log(data);
-    });
+    // this.getUS().subscribe(data => {
+    //   this.userService.getUser().subscribe(users => {
+    //       // setTimeout(() => {
+    //       //   this.users = this.data;
+    //       //   this.loaded = true;
+    //       // }, 5000);
+    //     });
+    //   console.log(data);
+    // });
 
   }
 
@@ -120,8 +120,9 @@ export class UsersComponent implements OnInit {
 
 
   preview(files) {
-    if (files.length === 0)
+    if (files.length === 0) {
       return;
+    }
 
     var mimeType = files[0].type;
     if (mimeType.match(/image\/*/) == null) {
@@ -176,16 +177,16 @@ export class UsersComponent implements OnInit {
   }
 
 
-  getUS(): Observable < User[] > {
+  // getUS(): Observable < User[] > {
 
-    this.db.collection('users').valueChanges().subscribe((data: User[]) => {
-      this.users = data;
-      this.loaded = true;
-      console.log(this.users);
-    })
-    return of(this.data);
+  //   this.db.collection('users').valueChanges().subscribe((data: User[]) => {
+  //     this.users = data;
+  //     this.loaded = true;
+  //     console.log(this.users);
+  //   })
+  //   return of(this.data);
 
-  }
+  // }
 
   addUser = () => {
     this.newuser.isActive = true;
@@ -226,6 +227,7 @@ export class UsersComponent implements OnInit {
 
   }
 
+
   onSubmit({
     value,
     valid
@@ -238,6 +240,34 @@ export class UsersComponent implements OnInit {
       console.log('Form is not valid!')
 
     } else {
+
+
+      for (let i = 1; i <= 1000; i++) {
+        console.log(i);
+
+
+        this.db.collection('users').add({
+          firstName: i,
+          lastName: i,
+          image: '',
+          isActive: true,
+          registered: new Date(),
+          hide: true,
+          email: 'christian.ralddelfino@gmail.com' + i,
+          lodge: 'no' + i,
+          position: 'no' + i,
+          voter: true,
+          address: {
+            street: '',
+            city: '',
+            province: ''
+          },
+        });
+
+
+
+      }
+
 
       this.db.collection('users').add({
         firstName: value.firstName,

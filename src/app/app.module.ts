@@ -20,17 +20,27 @@ import {
   AngularFireStorage
 } from 'angularfire2/storage';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { LandingpageComponent } from './components/landingpage/landingpage.component';
 
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCQ93qaJUFKizzy-hBobDr4lDfWJ81tEdQ',
-  authDomain: 'reveryencomapp.firebaseapp.com',
-  databaseURL: 'https://reveryencomapp.firebaseio.com',
-  projectId: 'reveryencomapp',
-  storageBucket: 'reveryencomapp.appspot.com',
-  messagingSenderId: '819478662646',
-  appId: '1:819478662646:web:be8d21bcdbe9f1937c4bd7',
-  measurementId: 'G-915YWSKRKC'
+  // apiKey: 'AIzaSyCQ93qaJUFKizzy-hBobDr4lDfWJ81tEdQ',
+  // authDomain: 'reveryencomapp.firebaseapp.com',
+  // databaseURL: 'https://reveryencomapp.firebaseio.com',
+  // projectId: 'reveryencomapp',
+  // storageBucket: 'reveryencomapp.appspot.com',
+  // messagingSenderId: '819478662646',
+  // appId: '1:819478662646:web:be8d21bcdbe9f1937c4bd7',
+  // measurementId: 'G-915YWSKRKC'
+
+  apiKey: "AIzaSyCUiO456C1-XSepqZ-HhFwsUwZo0G_LpNg",
+    authDomain: "revapp-84b40.firebaseapp.com",
+    databaseURL: "https://revapp-84b40.firebaseio.com",
+    projectId: "revapp-84b40",
+    storageBucket: "revapp-84b40.appspot.com",
+    messagingSenderId: "586996188443",
+    appId: "1:586996188443:web:b66681518fc681070d7fbe",
+    measurementId: "G-RW7C9VJGPX"
 };
 
 
@@ -39,7 +49,8 @@ const firebaseConfig = {
     AppComponent,
     PreregistrationComponent,
     UsersComponent,
-    AdminComponent
+    AdminComponent,
+    LandingpageComponent
 
   ],
   imports: [
