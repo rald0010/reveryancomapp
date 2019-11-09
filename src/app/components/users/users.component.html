@@ -3,20 +3,20 @@
 </div> -->
 
 
-<div *ngIf="showUserForm" class="card card-body mb-2 list-unstyled" style="width: 38rem;">
-  <h3>REGISTER</h3>
-  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" class="card card-body mb-2 list-unstyled">
+<div *ngIf="showUserForm" class="card card-body mb-2 container-fluid list-unstyled" style="width: 38rem;">
+  <h2>REGISTER</h2>
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" class="card card-body mb-2 list-unstyled container-fluid">
 
 
-    <li  >
+    <li>
       <div class="row" style="height: 100px;">
         <div class="col">
-            <label>Choose an Imge for your ID:</label>
-            <input #file type="file" accept='image/*' (change)="preview(file.files)" />
+          <label>Choose an Image for your ID:</label>
+          <input #file type="file" accept='image/*' (change)="preview(file.files)" />
         </div>
         <div class="col">
-            <figure class="rounded float-right" style="width: 102px; height: 102px; border: 1px solid #000">
-            <img [src]="imgURL"  *ngIf="imgURL" height="100" width="100" style="border: black;">
+          <figure class="rounded float-right" style="width: 102px; height: 102px; border: 1px solid #000">
+            <img [src]="imgURL" *ngIf="imgURL" height="100" width="100" style="border: black;">
           </figure>
         </div>
 
@@ -122,11 +122,6 @@
 
 
 
-
-
-
-
-
     </div>
 
 
@@ -138,15 +133,68 @@
 
     <ng-template #mymodal let-modal>
       <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
+        <h4 class="modal-title" id="modal-basic-title">CONGRATULATIONS</h4>
         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Your Authentication QR Code is Ready!
-        <ngx-qrcode qrc-element-type="url" [qrc-value]=newuser.voter+newuser.email></ngx-qrcode>
+        Your ID is Ready!
+
+
+
+<br>
+<br>
+<br>
+
+
+        <div class="id-card-tag"></div>
+        <div class="id-card-tag-strip"></div>
+        <div class="id-card-hook"></div>
+        <div class="id-card-holder">
+          <div class="id-card">
+            <div class="header">
+
+              <img src="../../../assets/images/72949481_459029774962583_6782797874955550720_n.png">
+
+            </div>
+
+
+            <div class="photo">
+
+              <figure class="rounded mx-auto d-block" style="width: 102px; height: 102px; border: 1px solid #000">
+                <img [src]="imgURL" *ngIf="imgURL" height="100" width="100" style="border: black;">
+              </figure>
+
+            </div>
+            <h2>{{newuser.firstName}} {{newuser.lastName}}</h2>
+            <div class="qr-code">
+
+              <ngx-qrcode qrc-element-type="url" [qrc-value]=newuser.voter+newuser.email></ngx-qrcode>
+
+            </div>
+            <h3>www.reveryancomapp.herokuapp.com</h3>
+            <hr>
+            <p><strong>"LOCATED AT"</strong>HOUSE,4th Floor, TC 11/729(4), Division Office Road <p>
+                <p>Near PMG Junction, Thiruvananthapuram Kerala, Clark <strong>695033</strong></p>
+                <p>Ph: 09302717587 | E-ail: info@ancom.info.com</p>
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
       </div>
+
+
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
       </div>

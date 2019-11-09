@@ -16,11 +16,18 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AdminComponent } from './components/admin/admin.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthService } from './shared/services/auth.service';
 import {
   AngularFireStorage
 } from 'angularfire2/storage';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { LandingpageComponent } from './components/landingpage/landingpage.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { AncompageComponent } from './components/ancompage/ancompage.component';
 
 
 const firebaseConfig = {
@@ -44,13 +51,21 @@ const firebaseConfig = {
 };
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     PreregistrationComponent,
     UsersComponent,
     AdminComponent,
-    LandingpageComponent
+    LandingpageComponent,
+    DashboardComponent,
+    SignInComponent,
+    SignUpComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent,
+    AncompageComponent
+
 
   ],
   imports: [
@@ -68,7 +83,8 @@ const firebaseConfig = {
 
 
   ],
-  providers: [UserService],
+  providers: [UserService,
+    AuthService],
   bootstrap: [AppComponent]
 })
 

@@ -1,27 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-2">
-    <a class="navbar-brand" href="/">Ancom App</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark mb-2" style="background-color: #ffffff00;">
+    <a class="navbar-brand" routerLink="/">Ancom</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="true" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor02">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/">Register</a>
+          <a class="nav-link" routerLink="/user"><i class="fa fa-user-circle-o"></i> Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link" routerLink="/sign-in"><i class="fa fa-sign-in"></i> Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
+          <a class="nav-link" routerLink="/about">About</a>
         </li>
+        <li class="nav-item">
+          <a routerLink="" class="fa fa-facebook" style="color: white; display: inline-block; margin: 10px 10px;"></a>
+        </li>
+        <li class="nav-item">
+          <a routerLink=""><i class="fa fa-twitter" style="color: white; display: inline-block; margin: 10px 10px;"></i></a>
+        </li>
+        <li class="nav-item">
+          <a routerLink=""><i class="fa fa-instagram" style="color: white; display: inline-block; margin: 10px 10px;"></i></a>
+        </li>
+        <li class="nav-item">
+          <a routerLink=""><i class="fa fa-pinterest" style="color: white; display: inline-block; margin: 10px 10px;"></i></a>
+        </li>
+        <li class="nav-item">
+          <a routerLink=""><i class="fa fa-linkedin" style="color: white; display: inline-block; margin: 10px 10px;"></i></a>
+        </li>
+
+
       </ul>
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-      </form>
+
     </div>
   </nav>
